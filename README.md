@@ -1,3 +1,83 @@
+# en-US
+## Project Challenge
+This project is the solution to a challenge. The classes and methods names were named in portuguese because the initial source code and the challenge were provided by a brazilian tech organization.
+
+## Context
+You are working on a system, and your managers have reported frequent issues with the software: bugs, functionalities that were working suddenly stop, validation problems, etc. Customers are beginning to doubt the quality of the code.
+
+Given this, you suggested the implementation of unit tests: writing tests covering the most critical parts of the system, with positive and negative scenarios, in order to have traceability and control of the code, thus improving the quality of this system.
+
+The managers accepted your idea, and with that, you need to implement unit tests in the system.
+
+## Assumptions
+The system today has two projects: a console type, and a test type with **xUnit**. The console type project has two classes where the main logic is carried out: **ValidacoesLista** and **ValidacoesString**. These classes contain common methods that are used to perform various validations in certain scenarios.
+
+The test project has the test classes **ValidacoesListaTests** and **ValidacoesStringTests**, as well as their methods to validate the console type project, but they are incomplete.
+
+Your goal is to implement the test methods contained in the project.
+
+## Console Project, its Classes and Methods
+
+These are the classes of the console project, where the main logic of the system resides.
+
+**ValidacoesLista Class**
+
+Class responsible for performing various validations involving lists.
+
+| Class            | Method                       | Objective                                                                                                                 |
+|----------------- |----------------------------- |------------------------------------------------------------------------------------------------------------------------- |
+| ValidacoesLista  | RemoverNumerosNegativos      | Receives a list of integers and returns a new list, only with positive numbers                                           |
+| ValidacoesLista  | ListaContemDeterminadoNumero | Receives a list of integers and checks if a certain number is present within that list                                   |
+| ValidacoesLista  | MultiplicarNumerosLista      | Receives a list of integers and returns a new list, with its values multiplied by a certain number                       |
+| ValidacoesLista  | RetornarMaiorNumeroLista     | Receives a list of integers and returns the highest number among them                                                    |
+| ValidacoesLista  | RetornarMenorNumeroLista     | Receives a list of integers and returns the lowest number among them                                                     |
+
+**ValidacoesString Class**
+
+Class responsible for performing various validations involving strings.
+
+| Class            | Method                       | Objective                                                                                                                 |
+|----------------- |----------------------------- |-------------------------------------------------------------------------------------------------------------------------- |
+| ValidacoesString | RetornarQuantidadeCaracteres | Receives any text and returns the number of characters present in the text                                                |
+| ValidacoesString | ContemCaractere              | Receives any text and a text to be searched, returns true or false if a certain searched snippet is present in the text   |
+| ValidacoesString | TextoTerminaCom              | Receives any text and a snippet to be searched, returns true or false if a certain searched snippet is present only at the end of the text |
+
+## Test Project, its Classes and Methods
+
+**ValidacoesListaTests Class**
+
+Class responsible for testing the ValidacoesLista class.
+
+| Class                 | Test Method                                 | Expected Test Result                                                                                                      |
+|---------------------- |-------------------------------------------- |------------------------------------------------------------------------------------------------------------------------- |
+| ValidacoesListaTests  | DeveRemoverNumerosNegativosDeUmaLista       | When passing a list with several numbers, including positive and negative, it should return a new list only with positive numbers |
+| ValidacoesListaTests  | DeveConterONumero9NaLista                   | When passing a list with several numbers, including the number 9, it should return true, as it found the 9 in the list  |
+| ValidacoesListaTests  | NaoDeveConterONumero10NaLista               | When passing a list with several numbers, but without the number 10, it should return false, as it did not find the 10 in the list |
+| ValidacoesListaTests  | DeveMultiplicarOsElementosDaListaPor2       | When passing a list of integers, it should return a new list, with all elements of the list multiplied by 2              |
+| ValidacoesListaTests  | DeveRetornar9ComoMaiorNumeroDaLista         | When passing a list of integers, the largest being 9, it should return 9 as the largest element within that list         |
+| ValidacoesListaTests  | DeveRetornarOitoNegativoComoMenorNumeroDaList | When passing a list of integers, the smallest being -8, it should return -8 as the smallest element within that list     |
+
+**ValidacoesStringTests Class**
+
+Class responsible for testing the ValidacoesString class.
+
+| Class                  | Test Method                                  | Expected Test Result                                                                                                      |
+|----------------------- |--------------------------------------------- |-------------------------------------------------------------------------------------------------------------------------- |
+| ValidacoesStringTests  | DeveRetornar6QuantidadeCaracteresDaPalavraMatrix | When passing a text written with the word "Matrix", it should return the number 6, representing 6 characters present in the word |
+| ValidacoesStringTests  | DeveContemAPalavraQualquerNoTexto            | When passing a text written "This is any text" and searching for the word "any", it should return true because the word exists in the text |
+| ValidacoesStringTests  | NaoDeveConterAPalavraTesteNoTexto            | When passing a text written "This is any text" and searching for the word "test", it should return false because the word does not exist in the text |
+| ValidacoesStringTests  | TextoDeveTerminarComAPalavraProcurado        | When passing a text written "Beginning, middle, and end of the sought text" and searching for the word "sought", it should return true because the word exists in the text and is included at the end of the text |
+
+## Project Structure
+
+The project is structured as follows:
+
+![Métodos Swagger](Imagens/projeto.png)
+
+## Solution
+The test code is halfway done, and you should continue implementing the tests described above, so that in the end, we have a functional test program. Look for the commented word "TODO" in the code, then implement it according to the above rules.
+
+# pt-BR
 ## Desafio de projeto
 Esse projeto é a solução de um desafio.
 
